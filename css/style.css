@@ -1,0 +1,207 @@
+body {
+    background: #fff;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+.fadeOut {
+    opacity: 0 !important;
+}
+.todo-app {
+    display: block;
+    width: 600px;
+    max-width: 100%;
+    margin: 50px auto 200px;
+}
+.todo-app .flash-message {
+    color: transparent;
+    background: #ea0050;
+    margin: 0;
+    text-align: center;
+    height: 0;
+    opacity: 0;
+    -webkit-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+.todo-app .flash-message.visible {
+    color: #fff;
+    padding: 10px;
+    height: auto;
+    opacity: 1;
+}
+.todo-app .totalCount {
+    color: #4caf50;
+    background: #fff;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 100%;
+    width: 20px;
+    height: 20px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    text-align: center;
+    margin-left: 4px;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    justify-content: center;
+}
+.todo-app ul {
+    list-style: none;
+    padding: 0;
+}
+.todo-app ul li {
+    margin-bottom: 10px;
+    opacity: 1;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.todo-app ul li input[type=text] {
+    display: none;
+}
+.todo-app ul li.editMode input[type=text] {
+    display: inline-block;
+}
+.todo-app ul li.editMode label {
+    display: none;
+}
+.todo-app ul li label, .todo-app ul li input[type=text] {
+    font-size: 16px;
+    padding: 0 14px;
+    font-weight: normal;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.todo-app button {
+    font-size: 13px;
+    color: #fff;
+    background: #4CAF50;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+.todo-app h3 {
+    margin: 0;
+    background: #03A9F4;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    align-items: center;
+}
+.todo-app h3 label {
+    margin: 0;
+}
+.todo-app .inner-section {
+    padding: 30px 30px;
+}
+.todo-app .add-section, .todo-app .incomplete-section, .todo-app .completed-section {
+    margin-bottom: 20px;
+}
+.todo-app .inner-section {
+    border: 1px solid #ddd;
+    border-top: none;
+}
+.todo-app .add-section .inner-section {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+}
+#new-task {
+    width: 80%;
+    font-size: 16px;
+    padding: 14px;
+    font-weight: normal;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#new-button {
+    font-size: 17px;
+    width: 20%;
+    margin-left: 8px;
+}
+#completed-tasks label {
+    text-decoration: line-through;
+    color: #888;
+}
+#incomplete-tasks li, #completed-tasks li {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+#incomplete-tasks li:last-of-type, #completed-tasks li:last-of-type {
+    border-bottom: none;
+}
+#incomplete-tasks li input[type="checkbox"], #completed-tasks li input[type="checkbox"] {
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -moz-box-flex: 1;
+    flex-grow: 1;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    -webkit-align-self: center;
+    align-self: center;
+    height: 18px;
+    width: 18px;
+}
+#incomplete-tasks li label, #completed-tasks li label, #incomplete-tasks li input[type="text"], #completed-tasks li input[type="text"] {
+    -ms-flex-positive: 6;
+    -webkit-box-flex: 6;
+    -webkit-flex-grow: 6;
+    -moz-box-flex: 6;
+    flex-grow: 6;
+    width: 75%;
+    padding: 10px 15px;
+    border: 1px solid #888;
+    font-size: 18px;
+    margin-left: 10px;
+}
+#incomplete-tasks li input[type="text"], #completed-tasks li input[type="text"] {
+    color: #888;
+}
+#incomplete-tasks li label, #completed-tasks li label {
+    border: 1px solid #fff;
+}
+#incomplete-tasks li button, #completed-tasks li button {
+    -ms-flex-positive: 2;
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -moz-box-flex: 2;
+    flex-grow: 2;
+    margin-left: 8px;
+    width: 60px;
+    height: 52px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    -webkit-align-self: center;
+    align-self: center;
+}
