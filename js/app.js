@@ -11,9 +11,9 @@
         if (element.addEventListener) {
             element.addEventListener(eventType, eventHandler, false);
         } else if (element.attachEvent) {
-            element.attachEvent('on' + eventType, eventHandler);
+            element.attachEvent(eventType, eventHandler);
         } else {
-            element[ 'on' + eventType ] = eventHandler;
+            element[ eventType ] = eventHandler;
         }
     }
 
@@ -90,7 +90,7 @@
         } else if (whichList === 'completed-tasks') {
             index                  = completedList.indexOf(oldTask);
             completedList[ index ] = newTask;
-            saveToLocalStorage('completedList');
+            saveToLocalStorage('      ');
         }
     };
 
@@ -137,7 +137,7 @@
         }
     };
 
-    var editTask = function () {
+    const editTask = function () {
         const listItem   = this.parentNode;
         const editInput  = listItem.querySelector('input[type="text"]');
         const editButton = listItem.querySelector('button.edit');
@@ -168,7 +168,7 @@
         listItem.classList.toggle('editMode');
     };
 
-    var deleteTask = function () {
+    const deleteTask = function () {
         const listItem = this.parentNode;
         const task     = listItem.querySelector('label').innerHTML;
         const ul       = listItem.parentNode;
@@ -223,7 +223,7 @@
         }
     };
 
-    const bindTaskEvents = (taskListItem, checkboxEventHandler)  => {
+    const bindTaskEvents = (taskListItem, checkboxEventHandler) => {
         const whichList    = taskListItem.parentNode.id;
         const checkbox     = taskListItem.querySelector('input[type="checkbox"]');
         const editButton   = taskListItem.querySelector('button.edit');
